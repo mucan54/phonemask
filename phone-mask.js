@@ -1,6 +1,5 @@
 require([
-    'jquery',
-    'Magento_Theme/js/jquery.initialize'
+    'jquery'
 ], function ($) {
 
     $(document).ready(function () {

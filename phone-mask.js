@@ -22,8 +22,10 @@ require([
 
                 $('#' + $(this).attr('id') + '-myphone')
 
-                    .keyup(function () {
-                        $('#' + $(this).attr('id').replace("-myphone", "")).val($(this).val().replace("0(", "").replace(")", "").replace(" ", "").replace("-", ""));
+                    .on('input', function(){
+                        //$('#' + $(this).attr('id').replace("-myphone", "")).val($(this).val().replace("0(", "").replace(")", "").replace(" ", "").replace("-", ""));
+                        // Knockout binding .change()
+                        $('#' + $(this).attr('id').replace("-myphone", "")).val($(this).val().replace("0(", "").replace(")", "").replace(" ", "").replace("-", "")).change();
                     })
 
                     .keydown(function (e) {
